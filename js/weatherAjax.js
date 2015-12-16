@@ -1,8 +1,10 @@
 
 function getWeather()
 {
-	//cedar park lattitude longitude
-	var lat = 30.5067;
+	//cedar park lattitude longitude... 
+	//Below is the url to get lattitude, longitude
+	//http://graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php?listZipCodeList=78613
+	var lat = 30.5146;
 	var lon = -97.8303;
 	
 	var product = "time-series";

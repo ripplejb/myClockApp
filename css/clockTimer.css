@@ -4,7 +4,7 @@
 
 }
 
-body, .tileBlur {
+body {
 	background-image: url("../img/background.jpg");	
 	background-repeat: no-repeat;
 	background-size: auto;
@@ -12,46 +12,17 @@ body, .tileBlur {
 
 .tileContainer {
   	position: relative;
-	box-shadow: 4px 4px 2px #888888;
-	display: inline-block;	
-}
-
-.tile {
-	position: relative;
-	z-index: 100;
-	display: inline-block;	
-
-}
-
-.tileBlur {
-	position:absolute;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
-	z-index: 99;
-	
-	/**-5px because .tileContainer margin is 5px*/
-	background-position: top 0px; 
-	
-	-webkit-filter: blur(10px);
-	filter: blur(10px);
+	display: block;
+	box-shadow: 2px 2px 1px #35373c;
+	background-color: rgba(255,255,255,0.7); 
+	margin: 50px;
 }
 
 .timeDivs, .weatherDivs {
 	font-family: vegurReg;
 	color: #2E481B;
 	opacity: 1.0;
-	text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
-	display: inline-block;
-}
-
-
-#weatherContainer {
-	display: inline-block;
-	position: absolute;
-	bottom: 10px;
-	text-align: center;		
+	/* text-shadow: -1px -1px 1px #667F54, 1px 1px 1px #000; */
 }
 
 #myTime {
@@ -65,14 +36,31 @@ body, .tileBlur {
 	right: 0px;
 }
 
-#today, #tomorrow, #day3, #day4, #day5, #day6 {
-	font-size: 48px;
-	bottom: 0px;
-	left: 10px;
-	right: 10px;	
-	margin: 10px;
-	float: left;
+#weatherContainer {
+  	position: relative;
+	display: block;
+	margin: 50px;
+	text-align: center;	
 }
+
+#weatherBox {
+	display: inline-block;	
+}
+
+#today, #tomorrow, #day3, #day4, #day5, #day6 {
+	width: 150px;
+	height: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 48px;
+    display: inline-block;
+    *display: inline;
+	text-align: center;
+	vertical-align: top;
+	box-shadow: 2px 2px 1px #35373c;
+	background-color: rgba(255,255,255,0.7); 
+}
+
 
 #closeButton {
 	top: 0;
@@ -87,7 +75,3 @@ body, .tileBlur {
 #closeButton:hover {
 	opacity: 1.0;
 }
-#clock, #weather {
-	background-color: rgba(255,255,255,0.4); 
-	}
-	
